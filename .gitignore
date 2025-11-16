@@ -1,0 +1,41 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# PlatformIO
+.pio/
+.vscode/
+.clang_complete
+.gcc-flags.json
+
+# Firmware builds
+*.bin
+*.elf
+*.hex
+*.uf2
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+._*
+
+# Logs
+*.log
+screen_log.txt
+
+# Temporary files
+*.tmp
+*.bak

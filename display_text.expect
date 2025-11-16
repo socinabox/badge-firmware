@@ -1,0 +1,51 @@
+#!/usr/bin/expect -f
+#
+# Automate FreeWili badge text display via menu system
+# Author: David Broggy
+#
+# Usage: ./display_text.expect "/dev/cu.usbmodem214201" "Text to display"
+#
+
+set port [lindex $argv 0]
+set text [lindex $argv 1]
+
+set timeout 5
+
+# Open serial connection
+spawn screen $port 115200
+
+# Wait for boot banner or menu
+sleep 1
+
+# Send Enter to wake up menu
+send "\n"
+expect "Enter Letter:"
+
+# Navigate to Display Functions
+send "g"
+expect "Display Functions"
+expect "Enter Letter:"
+
+# Navigate to GUI Functions
+send "g"
+expect "GUI Functions"
+expect "Enter Letter:"
+
+# Select Show Text Display
+send "p"
+expect "Enter Text To Display"
+
+# Send the text
+send "$text\n"
+
+# Wait a moment for display to update
+sleep 2
+
+# Exit screen (Ctrl+A, K, Y)
+send "\x01"
+send "k"
+expect "Really kill this window"
+send "y"
+
+# Done
+exit 0

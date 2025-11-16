@@ -1,0 +1,31 @@
+{
+  "name": "MVP Security Badge Scripts",
+  "version": "1.0.0",
+  "author": "David Broggy",
+  "description": "Script collection for MVP Security Badge",
+  "scripts": [
+    {
+      "id": "badge_design_test",
+      "name": "Badge Design Test",
+      "description": "Display the MVP Security Badge design on screen",
+      "file": "badge_design_test.py",
+      "type": "python",
+      "category": "test",
+      "icon": "shield"
+    },
+    {
+      "id": "wifi_scanner",
+      "name": "WiFi Scanner",
+      "description": "Scan and visualize WiFi networks",
+      "file": "../src/main.cpp",
+      "type": "compiled",
+      "category": "main",
+      "icon": "wifi"
+    }
+  ],
+  "settings": {
+    "screen_width": 170,
+    "screen_height": 320,
+    "azure_blue": "0x051F"
+  }
+}
