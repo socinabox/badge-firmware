@@ -39,3 +39,11 @@ screen_log.txt
 # Temporary files
 *.tmp
 *.bak
+
+# Presenter temporary files
+presenter/*_trim.wav
+presenter/*_compressed.wav
+presenter/temp_*.fwi
+presenter/temp_*.png
+presenter/temp_*.wav
+presenter/freewili_library_cache.json
